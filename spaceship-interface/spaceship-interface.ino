@@ -5,7 +5,7 @@ Spaceship Interface
 */
 
 //
-int switchState = 0;
+bool switchState = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -19,7 +19,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   switchState = digitalRead(2);         // check for button press
 
-  if (switchState == LOW) {
+  if (switchState == 0) {
     // button not clicked state:
     digitalWrite(3, HIGH);              // green LED on
     digitalWrite(4, LOW);               // red LED off

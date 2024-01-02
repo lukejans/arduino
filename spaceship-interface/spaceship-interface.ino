@@ -4,8 +4,7 @@ Project: 02
 Spaceship Interface 
 */
 
-//
-bool switchState = 0;
+bool switchState = 0;                   // on || off
 
 void setup() {
   // put your setup code here, to run once:

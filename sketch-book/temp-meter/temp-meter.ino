@@ -18,7 +18,7 @@ const float baselineTemp = 20.0;        // baseline temperature (degrees celsius
 void setup() {
   Serial.begin(9600);                   // open serial port to view analog input
 
-  for (int pinNumber = 2; pinNumber < 5; pinNumber++) {
+  for (int pinNumber = 2; pinNumber < 6; pinNumber++) {
     pinMode(pinNumber, OUTPUT);         // set LED pins to output
     digitalWrite(pinNumber, LOW);       // initial LED state is off
   }
@@ -56,10 +56,13 @@ void loop() {
   Serial.println(temperature);
 
   // set LEDs according to temperature:
-  if (temperature < baselineTemp + 2) {
+  if (temperature < baselineTemp - 2) {
+    digitalWrite(5, HIGH);
+  } else if (temperature < baselineTemp + 2) {
     digitalWrite(2, LOW);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
   } else if (temperature >= baselineTemp + 2  && temperature < baselineTemp + 4) {
     digitalWrite(2, HIGH);
     digitalWrite(3, LOW);
@@ -73,5 +76,5 @@ void loop() {
     digitalWrite(3, HIGH);
     digitalWrite(4, HIGH);
   }
-  delay(1000); // check every second
+  delay(250); 
 }

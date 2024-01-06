@@ -8,12 +8,12 @@ Keyboard Instrument:
 
 /*
 frequency setup: middle notes
-  C - 262Hz
-  D - 294Hz
-  E - 330Hz
-  F - 349Hz
-*/
-int notes[] = {741, 294, 330, 349};
+  B4 - 494Hz
+  C4 - 262Hz
+  D4 - 294Hz
+  E4 - 330Hz
+*/    
+int notes[] = {494, 262, 294, 330};
 
 void setup() {
   Serial.begin(9600);

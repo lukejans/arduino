@@ -91,6 +91,4 @@ void loop() {
   delay(240);
   tone(8, notes[3], 120);
   delay(2000);
-
-  delay(4000);
 }

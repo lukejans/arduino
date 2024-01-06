@@ -15,12 +15,16 @@ tone: only one tone can play at a time. Tone will interfere
       with analogWrite() on pins 3 and 11. (using pin 8)
 
 Blueface Song:
-  musical notes from: https://en.wikipedia.org/wiki/Category:Musical_notes
-  0  Eb5 - 622Hz
-  1  F#5 - 740Hz 
-  2  Ab6 - 1661Hz
-  3  Bb6 - 1865Hz
-  4  B6  - 1976Hz
+  sources: 
+    - https://en.wikipedia.org/wiki/Category:Musical_notes
+    - https://www.youtube.com/watch?v=5YLpE26GCa0
+
+  music notes:
+    Eb5 - 622Hz
+    F#5 - 740Hz 
+    Ab6 - 1661Hz
+    Bb6 - 1865Hz
+    B6  - 1976Hz
 */
 int notes[] = {622, 740, 1661, 1865, 1976};
 

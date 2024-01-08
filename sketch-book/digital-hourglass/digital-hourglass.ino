@@ -23,8 +23,6 @@ int led = 2;
 unsigned short interval = 4000;
 
 void setup() {
-    Serial.begin(9600);             // debug
-
     // set pin direction
     for (int x = 2; x < 8; x++) {
         pinMode(x, OUTPUT);
@@ -56,18 +54,17 @@ void loop() {
         }
     }
 
-    Serial.print("tilt switch: ");  // debug
-    Serial.println(switchState);    // debug
-
     switchState = digitalRead(switchPin);
 
-    // check if the tilt switch changed state
+    // check if the hour glass has been flipped
     if (switchState != preSwitchState) {
-        // reset hour glass
+        // reverse process
         for (int x = 2; x < 8; x++) {
             digitalWrite(x, LOW);
         }
         led = 2;
+
+        // track time of reset
         previousTime = currentTime;
     }
 

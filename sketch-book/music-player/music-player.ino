@@ -39,7 +39,7 @@ void playNote(int pin, int note, int duration, int notePause) {
     delay(notePause);
 }
 
-void blueface(){
+void blueface() {
   playNote(2, notes[0], 240, 240);
   playNote(2, notes[0], 120, 0);  
   playNote(3, notes[2], 120, 120);

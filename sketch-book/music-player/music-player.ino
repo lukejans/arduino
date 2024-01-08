@@ -61,7 +61,7 @@ void blueface() {
   delay(1560);  // 2000 - last note duration (480)
 
   playNote(3, notes[2], 120, 0);
-  playNote(4, notes[3], 120, 0);
+  playNote(4, notes[3], 120, 120);
   playNote(5, notes[4], 120, 120);
   playNote(4, notes[3], 120, 120);
   playNote(3, notes[2], 120, 120);
@@ -72,6 +72,69 @@ void blueface() {
   playNote(5, notes[4], 120, 120);
   playNote(4, notes[3], 120, 0);
   delay(1880);  // 2000 - last note duration (120)
+
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(3, notes[2], 120, 120);
+  playNote(6, notes[1], 120, 120);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 480, 960);
+  playNote(2, notes[0], 120, 240);
+  playNote(2, notes[0], 120, 15);
+  playNote(2, notes[0], 120, 240);
+  playNote(2, notes[0], 120, 15);
+  playNote(2, notes[0], 120, 240);
+  playNote(2, notes[0], 120, 15);
+  playNote(2, notes[0], 120, 240);
+  playNote(2, notes[0], 120, 15);
+  playNote(2, notes[0], 160, 200);
+  playNote(2, notes[0], 120, 15);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 0);
+  delay(1880); // 2000 - last note duration (120)
+
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(3, notes[2], 120, 120);
+  playNote(6, notes[1], 120, 120);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 480, 0);
+  delay(1560);  // 2000 - last note duration (480)
+
+  playNote(3, notes[2], 120, 0);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(3, notes[2], 120, 120);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 0);
+  delay(1880);  // 2000 - last note duration (120)
+
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(3, notes[2], 120, 120);
+  playNote(6, notes[1], 120, 120);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 480, 0);
+  delay(1560);  // 2000 - last note duration (480)
 } 
 
 void setup() {
@@ -87,5 +150,4 @@ void setup() {
 
 void loop() {
   blueface();
-  delay(1000);
 }

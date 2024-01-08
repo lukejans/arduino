@@ -21,7 +21,7 @@ unsigned long previousTime = 0;
 // next LED to turn on (start at pin 2)
 int led = 2;
 
-// total "hourglass" time: 
+// total "hourglass" time: 1min (6 * 10000ms)
 unsigned short interval = 10000;
 
 void setup() {
@@ -47,11 +47,15 @@ void loop() {
         if (led < 8 && timerFlipped) {
             previousTime = currentTime;         // track LED turn on time
             digitalWrite(led, HIGH);            // turn LED on
-            led++;                              // switch to next LED
+            if (led != 7) {
+                led++;                          // switch to next LED
+            }
         } else if (led > 1 && !timerFlipped) {
             previousTime = currentTime;         // track LED turn off time
             digitalWrite(led, LOW);             // turn LED off
-            led--;                              // switch to next LED
+            if (led != 2) {
+                led--;                          // switch to next LED
+            }
         }
     }
 

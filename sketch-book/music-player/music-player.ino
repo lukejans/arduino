@@ -30,11 +30,7 @@ Blueface Song:
 */
 int notes[] = {622, 740, 1661, 1865, 1976};
 
-/*
-play  note functions:
-
-
-*/
+// functions to play songs:
 void playNote(int pin, int note, int duration, int notePause) {
     digitalWrite(pin, HIGH);
     tone(8, note, duration);
@@ -43,19 +39,7 @@ void playNote(int pin, int note, int duration, int notePause) {
     delay(notePause);
 }
 
-
-void setup() {
-  // LED's
-  pinMode(2, OUTPUT);       // Eb5
-  pinMode(3, OUTPUT);       // Ab6
-  pinMode(4, OUTPUT);       // Bb6
-  pinMode(5, OUTPUT);       // B6
-  pinMode(6, OUTPUT);       // F#5
-
-  // piezo does not require a setup
-}
-
-void loop() {
+void blueface(){
   playNote(2, notes[0], 240, 240);
   playNote(2, notes[0], 120, 0);  
   playNote(3, notes[2], 120, 120);
@@ -88,4 +72,20 @@ void loop() {
   playNote(5, notes[4], 120, 120);
   playNote(4, notes[3], 120, 0);
   delay(1880);  // 2000 - last note duration (120)
+} 
+
+void setup() {
+  // LED's
+  pinMode(2, OUTPUT);       // Eb5
+  pinMode(3, OUTPUT);       // Ab6
+  pinMode(4, OUTPUT);       // Bb6
+  pinMode(5, OUTPUT);       // B6
+  pinMode(6, OUTPUT);       // F#5
+
+  // piezo does not require a setup
+}
+
+void loop() {
+  blueface();
+  delay(1000);
 }

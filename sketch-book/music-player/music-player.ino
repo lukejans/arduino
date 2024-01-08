@@ -30,150 +30,62 @@ Blueface Song:
 */
 int notes[] = {622, 740, 1661, 1865, 1976};
 
+/*
+play  note functions:
+
+
+*/
+void playNote(int pin, int note, int duration, int notePause) {
+    digitalWrite(pin, HIGH);
+    tone(8, note, duration);
+    delay(duration);
+    digitalWrite(pin, LOW);
+    delay(notePause);
+}
+
+
 void setup() {
   // LED's
-  pinMode(2, OUTPUT);       // red
-  pinMode(3, OUTPUT);       // yellow
-  pinMode(4, OUTPUT);       // white
-  pinMode(5, OUTPUT);       // blue
-  pinMode(6, OUTPUT);       // green
+  pinMode(2, OUTPUT);       // Eb5
+  pinMode(3, OUTPUT);       // Ab6
+  pinMode(4, OUTPUT);       // Bb6
+  pinMode(5, OUTPUT);       // B6
+  pinMode(6, OUTPUT);       // F#5
 
   // piezo does not require a setup
 }
 
-// if the duration of the note is the same as the delay,
-// it means there is no delay between notes.
 void loop() {
-  digitalWrite(2, HIGH);
-  tone(8, notes[0], 240);
-  delay(240);
-  digitalWrite(2, LOW);
-  delay(240);
-  digitalWrite(2, HIGH);
-  tone(8, notes[0], 120);      
-  delay(120);
-  digitalWrite(2, LOW);
-  digitalWrite(3, HIGH);
-  tone(8, notes[2], 120);
-  delay(120);
-  digitalWrite(3, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, LOW);
-  delay(120);
-  digitalWrite(5, HIGH);
-  tone(8, notes[4], 120);
-  delay(120);
-  digitalWrite(5, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, LOW);
-  delay(1880);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);  
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 0);
+  delay(1880);  // 2000 - last note duration (120)
 
-  digitalWrite(5, HIGH);
-  tone(8, notes[4], 120);
-  delay(120);
-  digitalWrite(5, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, LOW);
-  delay(120);
-  digitalWrite(3, HIGH);
-  tone(8, notes[2], 120);
-  delay(120);
-  digitalWrite(3, LOW);
-  delay(120);
-  digitalWrite(6, HIGH);
-  tone(8, notes[1], 120);
-  delay(120);
-  digitalWrite(6, LOW);
-  delay(120);
-  digitalWrite(2, HIGH);
-  tone(8, notes[0], 240);
-  delay(240);
-  digitalWrite(2, LOW);
-  delay(240);
-  digitalWrite(6, HIGH);
-  tone(8, notes[0], 120);
-  delay(120);
-  digitalWrite(6, LOW);
-  digitalWrite(3, HIGH);
-  tone(8, notes[2], 120);
-  delay(120);
-  digitalWrite(3, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, HIGH);
-  delay(120);
-  digitalWrite(5, HIGH);
-  tone(8, notes[4], 120);
-  delay(120);
-  digitalWrite(5, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 480);
-  delay(480);
-  digitalWrite(4, LOW);
-  delay(1560);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(3, notes[2], 120, 120);
+  playNote(6, notes[1], 120, 120);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 480, 0);
+  delay(1560);  // 2000 - last note duration (480)
 
-  digitalWrite(3, HIGH);
-  tone(8, notes[2], 120);
-  delay(120);
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  tone(8, notes[4], 120);
-  delay(120);
-  digitalWrite(5, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120); 
-  delay(120);
-  digitalWrite(4, LOW);
-  delay(120);
-  digitalWrite(3, HIGH);
-  tone(8, notes[2], 120);
-  delay(120);
-  digitalWrite(3, LOW);
-  delay(120);
-  digitalWrite(2, HIGH);
-  tone(8, notes[0], 240);
-  delay(240);
-  digitalWrite(2, LOW);
-  delay(240);
-  digitalWrite(2, HIGH);
-  tone(8, notes[0], 120);
-  delay(120);
-  digitalWrite(2, LOW);
-  digitalWrite(3, HIGH);
-  tone(8, notes[2], 120);
-  delay(120);
-  digitalWrite(3, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, LOW);
-  delay(120);
-  digitalWrite(5, HIGH);
-  tone(8, notes[4], 120);
-  delay(120);
-  digitalWrite(5, LOW);
-  delay(120);
-  digitalWrite(4, HIGH);
-  tone(8, notes[3], 120);
-  delay(120);
-  digitalWrite(4, LOW);
-  delay(1880);
+  playNote(3, notes[2], 120, 0);
+  playNote(4, notes[3], 120, 0);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(3, notes[2], 120, 120);
+  playNote(2, notes[0], 240, 240);
+  playNote(2, notes[0], 120, 0);
+  playNote(3, notes[2], 120, 120);
+  playNote(4, notes[3], 120, 120);
+  playNote(5, notes[4], 120, 120);
+  playNote(4, notes[3], 120, 0);
+  delay(1880);  // 2000 - last note duration (120)
 }

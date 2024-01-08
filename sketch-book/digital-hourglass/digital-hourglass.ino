@@ -1,17 +1,19 @@
 /*
 Project 08:
 
-Digital Hourglass
+Digital "Hourglass"
     - currently setup as a 6min timer
 */
 
-/*
-tilt switch 
-    - stating position (1)
-*/ 
+// tilt switch 
 const int switchPin = 8;
+
+// for comparing states
 bool switchState;
 bool preSwitchState;
+
+// indicates if the "hourglass" has been flipped
+bool timerFlipped = 1;
 
 // indicates the last time an led was turned on
 unsigned long previousTime = 0;
@@ -19,8 +21,8 @@ unsigned long previousTime = 0;
 // next LED to turn on (start at pin 2)
 int led = 2;
 
-// hour glass time: 1 min
-unsigned short interval = 4000;
+// total "hourglass" time: 
+unsigned short interval = 10000;
 
 void setup() {
     // set pin direction
@@ -39,31 +41,27 @@ void loop() {
     // tracking time
     unsigned long currentTime = millis();
 
-    //  turn LEDs on 
+    //  turn LEDs on at rate of interval
     if (currentTime - previousTime > interval) {
-        // track last LED turn on time
-        previousTime = currentTime;
-
-        // turn on the next LED
-        digitalWrite(led, HIGH);
-        led++;
-
         // check if all the LEDs have been turned on
-        if (led > 7) {
-            // TODO
+        if (led < 8 && timerFlipped) {
+            previousTime = currentTime;         // track LED turn on time
+            digitalWrite(led, HIGH);            // turn LED on
+            led++;                              // switch to next LED
+        } else if (led > 1 && !timerFlipped) {
+            previousTime = currentTime;         // track LED turn off time
+            digitalWrite(led, LOW);             // turn LED off
+            led--;                              // switch to next LED
         }
     }
 
     switchState = digitalRead(switchPin);
 
-    // check if the hour glass has been flipped
+    // check if the "hourglass" has been flipped
     if (switchState != preSwitchState) {
         // reverse process
-        for (int x = 2; x < 8; x++) {
-            digitalWrite(x, LOW);
-        }
-        led = 2;
-
+        timerFlipped = !timerFlipped;
+        
         // track time of reset
         previousTime = currentTime;
     }

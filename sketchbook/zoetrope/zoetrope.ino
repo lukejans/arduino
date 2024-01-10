@@ -40,15 +40,15 @@ const int onOffSwitchStateSwitchPin = 5;
 const int directionSwitchPin = 4;
 
 // remember program state
-int onOffSwitchState = 0;
-int previousOnOffSwitchState = 0;
-int directionSwitchState = 0;
-int previousDirectionSwitchState = 0;
+bool onOffSwitchState = 0;
+bool previousOnOffSwitchState = 0;
+bool directionSwitchState = 0;
+bool previousDirectionSwitchState = 0;
 
 // motor control 
-int motorEnabled = 0;
-int motorSpeed = 0;
-int motorDirection = 1;
+bool motorEnabled = 0;
+short motorSpeed = 0;
+bool motorDirection = 1;
 
 void setup() {  
   pinMode(directionSwitchPin, INPUT);
@@ -62,23 +62,24 @@ void setup() {
 }
 
 void loop() {
-  // read sensor information
+  // read button information
   onOffSwitchState = digitalRead(onOffSwitchStateSwitchPin);
   delay(1);
   directionSwitchState = digitalRead(directionSwitchPin);
+  delay(1);
 
-  // set motor speed
+  // read motor speed
   int potValue = analogRead(potPin);
   motorSpeed = map(potValue, 0, 1023, 0, 255);
 
-  // check if sensor has changed
+  // check if motor on/off button was pressed
   if (onOffSwitchState != previousOnOffSwitchState) {
     if (onOffSwitchState == HIGH) {
       motorEnabled = !motorEnabled;
     }
   }
 
-  // check if the direction has changed
+  // check if the spin direction button was pressed
   if (directionSwitchState != previousDirectionSwitchState) {
     if (directionSwitchState == HIGH) {
       motorDirection = !motorDirection;
@@ -104,6 +105,6 @@ void loop() {
   }
 
   // remember current state for next loop
-  previousDirectionSwitchState = directionSwitchState;
   previousOnOffSwitchState = onOffSwitchState;
+  previousDirectionSwitchState = directionSwitchState;
 }

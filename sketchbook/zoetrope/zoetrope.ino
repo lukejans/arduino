@@ -25,12 +25,85 @@ Zoetrope
     - dc motor positive and negative direction
   [PWR]
      8: dc motor power
-    16: dc motor power
+    16: h-bridge power
 */
 
-void setup() {  
+// arduino uno pin setup
+const int potPin = A0;
+// for [SPIN] on h-bridge to change direction (polarity)
+const int controlPin1 = 2; // 7
+const int controlPin2 = 3; // 2
+// for [PWM] on h-bridge to dc motor
+const int enablePin = 9;
+// switch buttons
+const int onOffSwitchStateSwitchPin = 5;
+const int directionSwitchPin = 4;
 
+// remember program state
+int onOffSwitchState = 0;
+int previousOnOffSwitchState = 0;
+int directionSwitchState = 0;
+int previousDirectionSwitchState = 0;
+
+// motor control 
+int motorEnabled = 0;
+int motorSpeed = 0;
+int motorDirection = 1;
+
+void setup() {  
+  pinMode(directionSwitchPin, INPUT);
+  pinMode(onOffSwitchStateSwitchPin, INPUT);
+  pinMode(controlPin1, OUTPUT);
+  pinMode(controlPin2, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+
+  // motor off in initial state
+  digitalWrite(enablePin, LOW);
 }
 
 void loop() {
+  // read sensor information
+  onOffSwitchState = digitalRead(onOffSwitchStateSwitchPin);
+  delay(1);
+  directionSwitchState = digitalRead(directionSwitchPin);
+
+  // set motor speed
+  int potValue = analogRead(potPin);
+  motorSpeed = map(potValue, 0, 1023, 0, 255);
+
+  // check if sensor has changed
+  if (onOffSwitchState != previousOnOffSwitchState) {
+    if (onOffSwitchState == HIGH) {
+      motorEnabled = !motorEnabled;
+    }
+  }
+
+  // check if the direction has changed
+  if (directionSwitchState != previousDirectionSwitchState) {
+    if (directionSwitchState == HIGH) {
+      motorDirection = !motorDirection;
+    }
+  }
+
+  // set motor direction
+  if (motorDirection == 1) {
+    digitalWrite(controlPin1, HIGH);
+    digitalWrite(controlPin2, LOW);
+  }
+  else {
+    digitalWrite(controlPin1, LOW);
+    digitalWrite(controlPin2, HIGH);
+  }
+
+  // PWM motor speed
+  if (motorEnabled == 1) {
+    analogWrite(enablePin, motorSpeed);
+  }
+  else {
+    analogWrite(enablePin, 0);
+  }
+
+  // remember current state for next loop
+  previousDirectionSwitchState = directionSwitchState;
+  previousOnOffSwitchState = onOffSwitchState;
 }

@@ -28,3 +28,7 @@
      |  UNO_R3    GND MOSI 5V  ____________/
       \_______________________/
 ```
+
+### **About**
+
+This repository is about simple projects I've made from reading the arduino starter kit projects book. Concepts learnt and discoveries made throughout the completion of this book have been noted in each individual project alongside the code.

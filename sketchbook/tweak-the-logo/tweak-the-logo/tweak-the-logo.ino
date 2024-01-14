@@ -11,7 +11,7 @@ void setup() {
 
 void loop() {
   int sensorValue = analogRead(A0) / 4;
-  Serial.println(sensorValue);  // Sending the value as a line with println
+  Serial.write(sensorValue);
   delay(5);
 }
 

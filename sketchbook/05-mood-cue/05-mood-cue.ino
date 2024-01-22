@@ -1,7 +1,7 @@
 /*
-Project 05:
+Project 05: Mood Cue
 
-Mood Cue
+clue people in to how you're doing.
 */
 
 // import servo library 

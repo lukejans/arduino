@@ -1,7 +1,7 @@
 /*
-Project 06:
+Project 06: Light Theremin
 
-Light Theremin
+create a musical instrument you play by waving your hands.
 */
 
 // create variables for calibrating sensor

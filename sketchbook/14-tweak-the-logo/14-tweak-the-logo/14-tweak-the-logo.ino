@@ -1,8 +1,8 @@
 /*
-Project 14:
+Project 14: Tweak The Logo
 
-Tweak The Logo:
-    - serial communication with a computer program, Processing
+control your personal computer from your Arduino.
+    - serial communication with a computer program (Processing)
 */
 
 void setup() {

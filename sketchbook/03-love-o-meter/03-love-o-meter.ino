@@ -1,7 +1,7 @@
 /*
-Project: 03
+Project 03: Love-O-Meter
 
-Temperature Meter
+measure how hot-blooded you are.
 */
 
 /*

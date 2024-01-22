@@ -1,7 +1,7 @@
 /*
-Project 12:
+Project 12: Knock Lock
 
-Knock Lock
+tap out the secret code to open the door.
 */
 
 #include <Servo.h>

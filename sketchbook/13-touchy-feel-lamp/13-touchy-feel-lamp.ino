@@ -1,7 +1,7 @@
 /*
-Project 13:
+Project 13: Touchy-Feel Lamp
 
-Capacitive Sensor
+a lamp that responds to your touch.
 */
 
 #include <CapacitiveSensor.h>

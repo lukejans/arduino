@@ -1,19 +1,19 @@
 /*
-Project 11:
+Project 11: Crystal Ball
 
-Liquid Crystal Display
+a mystical tour to answer all your tough questions.
 
+  - using LCD screen, visit: arduinocc/lcdlibrary
 
- VSS VDD V0  RS  R/W  E  DB0 DB1 DB2 DB3 DB4 DB5 DB6 DB7 LED+ LED-
-  |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-  ----------------------------------------------------------------------------
- |                                                                            |
-{|                                                                            |}
-{|                                L   C   D                                   |}
-{|                                                                            |}
- |                                                                            |
-  ----------------------------------------------------------------------------
-  visit: arduinocc/lcdlibrary
+      VSS VDD V0  RS  R/W  E  DB0 DB1 DB2 DB3 DB4 DB5 DB6 DB7 LED+ LED-
+       |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+      ----------------------------------------------------------------------------
+     |                                                                            |
+    {|                                                                            |}
+    {|                                L   C   D                                   |}
+    {|                                                                            |}
+     |                                                                            |
+      ----------------------------------------------------------------------------
 */
 
 #include <LiquidCrystal.h>

@@ -1,7 +1,7 @@
 /*
-Project 10:
+Project 10: Zoetrope
 
-Zoetrope
+create a mechanical animation you can play forward or reverse.
 
   - using H-bridge integrated circuit (IC)
                     _   _

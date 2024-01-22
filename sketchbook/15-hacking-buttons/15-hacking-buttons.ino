@@ -1,7 +1,7 @@
 /*
-Project 15:
+Project 15: Hacking Buttons
 
-Hacking Buttons
+create a master control for all your devices.
 
   - using optocoupler
 
@@ -11,6 +11,9 @@ Hacking Buttons
      3 -|______|- 4
 
 */
+
+const int optoPin = 2;
+
 void setup() {
 }
 

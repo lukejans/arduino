@@ -1,7 +1,7 @@
 /*
-Project 09
+Project 09: Motorized Pinwheel
 
-Motorized Pinwheel
+a colored wheel that will make your head spin.
 */
 
 const int potPin = A0;       // potentiometer connected to this pin

@@ -1,18 +1,14 @@
 /*
-Project 07:
+Project 07: Keyboard Instrument
 
-Keyboard Instrument:
+play music and make some noise with this keyboard.
+
+concepts:
   - send frequencies to piezo
   - resistor ladder
 */
-
-/*
-frequency setup: middle notes
-  B4 - 494Hz
-  C4 - 262Hz
-  D4 - 294Hz
-  E4 - 330Hz
-*/    
+   
+//             B4   C4   D4   E4
 int notes[] = {494, 262, 294, 330};
 
 void setup() {

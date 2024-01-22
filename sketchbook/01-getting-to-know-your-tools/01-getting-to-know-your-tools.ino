@@ -1,3 +1,9 @@
+/*
+Project 01: Getting To Know Your Tools
+
+an introduction to the basics.
+*/
+
 void setup() {
   // put your setup code here, to run once:
   pinMode(LED_BUILTIN, OUTPUT);

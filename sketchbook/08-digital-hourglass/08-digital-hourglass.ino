@@ -1,8 +1,7 @@
 /*
-Project 08:
+Project 08: Digital "Hourglass"
 
-Digital "Hourglass"
-    - currently setup as a 6min timer
+an LED light-up hourglass.
 */
 
 // tilt switch 

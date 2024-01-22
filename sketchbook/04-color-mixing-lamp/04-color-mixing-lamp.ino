@@ -1,7 +1,7 @@
 /*
-Project 04
+Project 04: Color Mixing Lamp
 
-Color Mixing Lamp
+produce any color with a lamp that uses light as an input.
 */
 
 const int greenLEDPin = 9;

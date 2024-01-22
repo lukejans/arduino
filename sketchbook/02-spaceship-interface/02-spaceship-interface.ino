@@ -1,7 +1,7 @@
 /*
-Project: 02
+Project 02: Spaceship Interface
 
-Spaceship Interface 
+design the control panel for your starship.
 */
 
 bool switchState = 0;                   // on || off

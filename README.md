@@ -6,7 +6,7 @@
  / __ |/ __/ _  / // / / _ \/ _ \
 /_/ |_/_/  \_,_/\_,_/_/_//_/\___/
 ----------------------------------
-projects repo for arduino sketches and circuits
+projects repo: sketches & circuits
 </pre>
 
 </div>

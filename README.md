@@ -1,13 +1,11 @@
 <div align="center">
 
 <pre>
- █████╗ ██████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗
-██╔══██╗██╔══██╗██╔══██╗██║   ██║██║████╗  ██║██╔═══██╗
-███████║██████╔╝██║  ██║██║   ██║██║██╔██╗ ██║██║   ██║
-██╔══██║██╔══██╗██║  ██║██║   ██║██║██║╚██╗██║██║   ██║
-██║  ██║██║  ██║██████╔╝╚██████╔╝██║██║ ╚████║╚██████╔╝
-╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
-------------------------------------------------------
+   ___          __     _         
+  / _ | _______/ /_ __(_)__  ___ 
+ / __ |/ __/ _  / // / / _ \/ _ \
+/_/ |_/_/  \_,_/\_,_/_/_//_/\___/
+----------------------------------
 projects repo for arduino sketches and circuits
 </pre>
 
@@ -15,9 +13,7 @@ projects repo for arduino sketches and circuits
 
 This repository currently only consists of simple projects created from reading the _starter kit [arduino projects book](https://www.goodreads.com/book/show/17935843-arduino-projects-book)_. All projects in the starter kit use the Arduino Uno.
 
-<br>
-
-### Arduino Uno
+## Arduino Uno
 
 ```
                                   +-----+

@@ -14,7 +14,7 @@ projects repo for arduino sketches and circuits
 
 </div>
 
-This repository currently only consists of simple projects created from reading the _starter kit [arduino projects book](https://www.goodreads.com/book/show/17935843-arduino-projects-book)_. Concepts learnt and discoveries made throughout the completion of this book have been noted in each individual project alongside the code and if necessary in a README.md file.
+This repository currently only consists of simple projects created from reading the _starter kit [arduino projects book](https://www.goodreads.com/book/show/17935843-arduino-projects-book)_.
 
 <br>
 

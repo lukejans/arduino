@@ -10,12 +10,14 @@
 ------------------------------------------------------
 projects repo for arduino sketches and circuits
 </pre>
-<img src="./assets/favicon.ico" width="40"/>
+
 </div>
 
-This repository currently only consists of simple projects created from reading the _starter kit [arduino projects book](https://www.goodreads.com/book/show/17935843-arduino-projects-book)_.
+This repository currently only consists of simple projects created from reading the _starter kit [arduino projects book](https://www.goodreads.com/book/show/17935843-arduino-projects-book)_. All projects in the starter kit use the Arduino Uno.
 
 <br>
+
+### Arduino Uno
 
 ```
                                   +-----+
